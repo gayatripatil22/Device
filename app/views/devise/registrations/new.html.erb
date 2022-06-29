@@ -15,7 +15,12 @@
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
-
+  <div class="field">
+  <%= f.label :role %>
+  <%= collection_select(
+    :user, :role_id, Role.all, :id, :role, { prompt: true }
+    ) %>
+   </div>
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
