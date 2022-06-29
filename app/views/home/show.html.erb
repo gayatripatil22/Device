@@ -1,0 +1,29 @@
+<%= search_form_for @q, remote: true do |f| %>
+    <%= f.label :email_cont, 'Full Name' %>
+    <%= f.search_field :email_cont %>
+    <%= f.submit %>
+  <% end %>
+
+  <h1>User details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <h1>users</h1>
+  <hr/>
+  <% @users.each do |user| %>
+    <h2><%= user.email %></h2>
+  <% end %>
+  <hr/>
+  <%= paginate @users %>
+  <%= page_entries_info @users %>
+  </tbody>
+</table>
+<br>
+
+

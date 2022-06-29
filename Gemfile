@@ -73,3 +73,7 @@ group :test do
 end
 
 gem "cancancan", "~> 3.4"
+
+gem "ransack", "~> 3.2"
+
+gem "kaminari", "~> 1.2"
