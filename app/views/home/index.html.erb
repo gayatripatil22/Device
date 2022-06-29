@@ -5,6 +5,7 @@
   <%= link_to "Logout", destroy_user_session_path, data: {
     turbo_method: :delete,
     turbo_confirm: "Are you sure want to log out ?" } %>
+    <%= link_to " post", posts_path, :class => 'navbar-link'  %>
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
